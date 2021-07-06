@@ -1,0 +1,47 @@
+@import './colors.scss';
+@import './classes.scss';
+
+.main-content {
+    padding: 30px;
+    background-color: rgb(224, 224, 224);
+    height: 90vh;
+
+    &__post-form {
+        @extend %bordered-block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: $no-bgc;
+    }
+
+    &__posts {
+        width: 90%;
+        @extend %bordered-block;
+        margin: 20px;
+        min-height: 20px;
+
+        &-post {
+            background-color: $no-bgc;
+            @extend %bordered-block;
+            width: 80%;
+            min-height: 20px;
+            margin: 20px auto;
+            padding: 15px;
+
+            &-title {
+               text-decoration: underline; 
+            }
+
+            &-content {
+                border: solid 1px;
+                border-radius: 10px;
+                padding: 10px;
+                overflow: scroll;
+            }
+
+            &-bottom-info {
+                font-size: 12px;
+            }
+        }
+    }
+}
